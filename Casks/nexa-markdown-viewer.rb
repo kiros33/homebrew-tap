@@ -7,6 +7,8 @@ cask "nexa-markdown-viewer" do
   desc "Markdown viewer built with Tauri"
   homepage "https://github.com/kiros33/sosomlab-nexa-viewer"
 
+  license :mit
+
   app "NexaMarkdownViewer.app"
 
   zap trash: [

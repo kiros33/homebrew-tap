@@ -20,3 +20,8 @@ brew upgrade --cask nexa-markdown-viewer
 ```sh
 brew uninstall --cask nexa-markdown-viewer
 ```
+
+## License
+
+Nexa Markdown Viewer is released under the [MIT License](https://github.com/kiros33/sosomlab-nexa-viewer/blob/main/LICENSE) © 2026 SosomLab.
+The cask definitions in this tap are likewise available under the MIT License.
