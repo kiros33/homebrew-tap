@@ -1,13 +1,12 @@
 cask "nexa-markdown-viewer" do
-  version "0.2.1"
-  sha256 "08a0f9965e5660f60877b883ea6294919c0185ec6d2284a2152386f9a125c725"
+  version "0.3.0"
+  sha256 "5277081a0830d7c2ada7c8e29335578e16fd05197ad789b0487085ec83505f41"
 
   url "https://github.com/kiros33/sosomlab-nexa-viewer/releases/download/v#{version}/NexaMarkdownViewer_#{version}_universal.dmg"
   name "Nexa Markdown Viewer"
   desc "Markdown viewer built with Tauri"
   homepage "https://github.com/kiros33/sosomlab-nexa-viewer"
 
-  license :mit
 
   app "NexaMarkdownViewer.app"
 
