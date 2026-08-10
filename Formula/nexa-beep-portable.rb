@@ -8,30 +8,30 @@
 class NexaBeepPortable < Formula
   desc "Zero-config local network messenger (portable binary)"
   homepage "https://github.com/SosomLab/nexa-beep"
-  version "0.1.0"
+  version "0.1.1"
   # PolyForm Noncommercial 1.0.0 — SPDX 식별자가 있다(오픈소스 라이선스는 아니다).
   license "PolyForm-Noncommercial-1.0.0"
 
   on_macos do
     on_arm do
-      url "https://github.com/SosomLab/nexa-beep/releases/download/v0.1.0/nexa-beep-0.1.0-macos-arm64-portable.zip"
-      sha256 "3b6b90d3e2a2cfb664fa43c30d9119ff4cb4b12228d15614f2ae909f2101d9b4"
+      url "https://github.com/SosomLab/nexa-beep/releases/download/v0.1.1/nexa-beep-0.1.1-macos-arm64-portable.tar.gz"
+      sha256 "7186583ee365e87cb118a733ce648ff02987be9cdd73cdb7a55a3ab9aab6e296"
     end
     on_intel do
-      url "https://github.com/SosomLab/nexa-beep/releases/download/v0.1.0/nexa-beep-0.1.0-macos-x64-portable.zip"
-      sha256 "486cfef9935c174a2f522cba3bcf4dc7b8cf7053dae4af84e73055db299d2a86"
+      url "https://github.com/SosomLab/nexa-beep/releases/download/v0.1.1/nexa-beep-0.1.1-macos-x64-portable.tar.gz"
+      sha256 "503562dfa6c3c7624f15aca3642f5e4bdb4d31ced9774bace2d4de1fa0f7aa6f"
     end
   end
 
   on_linux do
     on_intel do
-      url "https://github.com/SosomLab/nexa-beep/releases/download/v0.1.0/nexa-beep-0.1.0-linux-x64-portable.zip"
-      sha256 "28533d6a555d8d9d3e12ddd79014a607abb08bdc81846cb11ccc94852fc87763"
+      url "https://github.com/SosomLab/nexa-beep/releases/download/v0.1.1/nexa-beep-0.1.1-linux-x64-portable.tar.gz"
+      sha256 "58406973e189328ac104024f4f8c7ce3eb563cbb62459580add5e6f7278b5cc9"
     end
   end
 
   def install
-    # zip 최상위에 폴더가 하나 있으면 brew가 벗겨 주지만, 그 동작에 기대지 않는다 —
+    # 최상위에 폴더가 하나면 brew가 벗겨 주지만, 그 동작에 기대지 않는다 —
     # 포장 구조가 바뀌는 날 조용히 깨지느니 여기서 찾아서 확실히 설치한다.
     exe = Dir["nexa-beep", "*/nexa-beep"].first
     odie "포터블 압축물에서 nexa-beep 실행 파일을 찾지 못했습니다" if exe.nil?
