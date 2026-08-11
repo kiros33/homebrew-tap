@@ -1,6 +1,6 @@
 cask "nexa-markdown-viewer" do
-  version "0.3.3"
-  sha256 "4bc3ecbb7b304490cccdf19297cd8d7ad84dbf02abfc590579a9760cb304b7fe"
+  version "0.3.4"
+  sha256 "0088ad804e278f27eb6b57d5acf574b94bb807136efcd09b9958312fe80f80d1"
 
   url "https://github.com/kiros33/sosomlab-nexa-viewer/releases/download/v#{version}/NexaMarkdownViewer_#{version}_universal.dmg"
   name "Nexa Markdown Viewer"
