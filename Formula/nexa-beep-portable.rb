@@ -8,25 +8,25 @@
 class NexaBeepPortable < Formula
   desc "Zero-config local network messenger (portable binary)"
   homepage "https://github.com/SosomLab/nexa-beep"
-  version "0.1.3"
+  version "0.1.4"
   # PolyForm Noncommercial 1.0.0 — SPDX 식별자가 있다(오픈소스 라이선스는 아니다).
   license "PolyForm-Noncommercial-1.0.0"
 
   on_macos do
     on_arm do
-      url "https://github.com/SosomLab/nexa-beep/releases/download/v0.1.3/nexa-beep-0.1.3-macos-arm64-portable.tar.gz"
-      sha256 "4c206fa6d7abdcf442cd1499002e2bc895500db1f64294a55b3db0e7faab5048"
+      url "https://github.com/SosomLab/nexa-beep/releases/download/v0.1.4/nexa-beep-0.1.4-macos-arm64-portable.tar.gz"
+      sha256 "5582e72bb66b41ab89e0f321909dc908e28daa2b05129683bf91c527be8b99a7"
     end
     on_intel do
-      url "https://github.com/SosomLab/nexa-beep/releases/download/v0.1.3/nexa-beep-0.1.3-macos-x64-portable.tar.gz"
-      sha256 "661a5823ecdc86d806798b651a26855754f1c4ab2d21849b40d1c3b2fbafa1c9"
+      url "https://github.com/SosomLab/nexa-beep/releases/download/v0.1.4/nexa-beep-0.1.4-macos-x64-portable.tar.gz"
+      sha256 "e5c0952b7c643dae5ca34ca2e7c72b6d7b2b7dd129b9a6523e3528e5e8717715"
     end
   end
 
   on_linux do
     on_intel do
-      url "https://github.com/SosomLab/nexa-beep/releases/download/v0.1.3/nexa-beep-0.1.3-linux-x64-portable.tar.gz"
-      sha256 "c3ee2cedefd92749ae4b47a355654c4e427d2de7a36ef56df9a8ba5a3c32c7ea"
+      url "https://github.com/SosomLab/nexa-beep/releases/download/v0.1.4/nexa-beep-0.1.4-linux-x64-portable.tar.gz"
+      sha256 "5087eceba22dd2f42279d1cd5fb20421be1d906e29964c79a4def9be27deaa8b"
     end
   end
 
@@ -36,6 +36,10 @@ class NexaBeepPortable < Formula
     exe = Dir["nexa-beep", "*/nexa-beep"].first
     odie "포터블 압축물에서 nexa-beep 실행 파일을 찾지 못했습니다" if exe.nil?
     bin.install exe => "nexa-beep"
+    # 이미지 격리 디코드(M4-5) — 본체가 형제 경로에서 찾는다. 없으면 아바타 이니셜 폴백
+    # 이라 치명적이진 않지만, 있으면 같이 설치한다(구버전 압축물 호환 = 없어도 통과).
+    imgdec = Dir["nbeep-imgdec", "*/nbeep-imgdec"].first
+    bin.install imgdec => "nbeep-imgdec" unless imgdec.nil?
   end
 
   def caveats
