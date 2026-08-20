@@ -8,25 +8,25 @@
 class NexaBeepPortable < Formula
   desc "Zero-config local network messenger (portable binary)"
   homepage "https://github.com/SosomLab/nexa-beep"
-  version "0.1.8"
+  version "0.2.0"
   # PolyForm Noncommercial 1.0.0 — SPDX 식별자가 있다(오픈소스 라이선스는 아니다).
   license "PolyForm-Noncommercial-1.0.0"
 
   on_macos do
     on_arm do
-      url "https://github.com/SosomLab/nexa-beep/releases/download/v0.1.8/nexa-beep-0.1.8-macos-arm64-portable.tar.gz"
-      sha256 "83438ded3aa0877d0b28e3377506d0828f2ba4ef6cab91c33e03b1dd6209ff2b"
+      url "https://github.com/SosomLab/nexa-beep/releases/download/v0.2.0/nexa-beep-0.2.0-macos-arm64-portable.tar.gz"
+      sha256 "0501b83d145420e88a12097e3c9a03bc4a08d93ed8b8bced196f110e5b3267fe"
     end
     on_intel do
-      url "https://github.com/SosomLab/nexa-beep/releases/download/v0.1.8/nexa-beep-0.1.8-macos-x64-portable.tar.gz"
-      sha256 "9e726005ff996294b8805aa695eb449641fef7830edf9f8152072324afc8aa97"
+      url "https://github.com/SosomLab/nexa-beep/releases/download/v0.2.0/nexa-beep-0.2.0-macos-x64-portable.tar.gz"
+      sha256 "3f6c22cef28e651c611828e124436d309291de320e1e6420fe0863906cf065a9"
     end
   end
 
   on_linux do
     on_intel do
-      url "https://github.com/SosomLab/nexa-beep/releases/download/v0.1.8/nexa-beep-0.1.8-linux-x64-portable.tar.gz"
-      sha256 "e514f57c8f4e2b518e552049ba078b8306d3ec05358d2924507deeeae5ba1e81"
+      url "https://github.com/SosomLab/nexa-beep/releases/download/v0.2.0/nexa-beep-0.2.0-linux-x64-portable.tar.gz"
+      sha256 "43eca502e53fdfdd28d512f9251d7443fe702bb650d77fbd9f454cf6a8dbab4e"
     end
   end
 
