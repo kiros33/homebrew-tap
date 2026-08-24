@@ -15,9 +15,9 @@
 cask "nexa-beep" do
   arch arm: "arm64", intel: "x64"
 
-  version "0.2.8"
-  sha256 arm:   "4ac306f818e7524ef970690a6fa5ea3b7f868390e3a431a52466dc7c9ba18d5e",
-         intel: "b67a6833c7fb9d2192045ffff50a9ea3db6a5059ccfe61f495a40d52ffca4303"
+  version "0.2.9"
+  sha256 arm:   "c0d6b750715a8d73d7a3a18629885144018827dd730a3a3cc51ea33328a55d86",
+         intel: "4281646965f9ce8aac403577d17de0eb4b044cd058bbf72e3ba649428557c968"
 
   url "https://github.com/SosomLab/nexa-beep/releases/download/v#{version}/nexa-beep-#{version}-macos-#{arch}.dmg",
       verified: "github.com/SosomLab/nexa-beep/"
@@ -52,9 +52,11 @@ cask "nexa-beep" do
     이 앱은 같은 로컬 네트워크의 사용자를 찾기 위해 첫 실행 시 네트워크 접근 권한을 요청합니다.
   EOS
 
-  # ⚠️ 앱이 아직 스스로 저장하는 것이 없다(설정 영속 M3-15 대기).
-  #    아래는 **macOS가 앱마다 자동으로 만드는** 경로다 — 실제로 생기는 것만 적는다.
+  # 앱 데이터(신원 키·핀·설정·기록)는 **번들 밖** `~/Library/Application Support/nexa-beep`에
+  # 둔다(08-24 — 번들 안에 두면 `brew upgrade`가 번들째 지우며 신원이 사라진다).
+  # zap은 사용자가 "흔적까지" 지우겠다고 할 때만 도니, 신원 폴더를 여기 적는 것이 맞다.
   zap trash: [
+    "~/Library/Application Support/nexa-beep",
     "~/Library/Preferences/io.github.sosomlab.nexa-beep.plist",
     "~/Library/Saved Application State/io.github.sosomlab.nexa-beep.savedState",
   ]
