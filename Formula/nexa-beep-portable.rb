@@ -8,25 +8,25 @@
 class NexaBeepPortable < Formula
   desc "Zero-config local network messenger (portable binary)"
   homepage "https://github.com/SosomLab/nexa-beep"
-  version "0.2.9"
+  version "0.2.10"
   # PolyForm Noncommercial 1.0.0 — SPDX 식별자가 있다(오픈소스 라이선스는 아니다).
   license "PolyForm-Noncommercial-1.0.0"
 
   on_macos do
     on_arm do
-      url "https://github.com/SosomLab/nexa-beep/releases/download/v0.2.9/nexa-beep-0.2.9-macos-arm64-portable.tar.gz"
-      sha256 "492367a55141ca23a419cc8880e3216b791d384d209a9bce63ea41cf36c23964"
+      url "https://github.com/SosomLab/nexa-beep/releases/download/v0.2.10/nexa-beep-0.2.10-macos-arm64-portable.tar.gz"
+      sha256 "b6ccf36f13f763523e4d12fd545a193c1f49093aa319b3e9fddcba6f94bfa99a"
     end
     on_intel do
-      url "https://github.com/SosomLab/nexa-beep/releases/download/v0.2.9/nexa-beep-0.2.9-macos-x64-portable.tar.gz"
-      sha256 "0867f5e797e30e308b0ec7107c3563e7602133575bced479665d8c892c528bd4"
+      url "https://github.com/SosomLab/nexa-beep/releases/download/v0.2.10/nexa-beep-0.2.10-macos-x64-portable.tar.gz"
+      sha256 "6dc497b272c85d458134d1f18f2e48984170bebf3ecd6fe9b1e9370716652fc7"
     end
   end
 
   on_linux do
     on_intel do
-      url "https://github.com/SosomLab/nexa-beep/releases/download/v0.2.9/nexa-beep-0.2.9-linux-x64-portable.tar.gz"
-      sha256 "ea5c91adde73cf323cb4f02403c86f6a1cf8e25f5aab3bb8d49b732f36590376"
+      url "https://github.com/SosomLab/nexa-beep/releases/download/v0.2.10/nexa-beep-0.2.10-linux-x64-portable.tar.gz"
+      sha256 "4e075f3e36cfc88e261ee4f4206bbefacf2f9091048090c48ac1b195769f080b"
     end
   end
 
@@ -44,8 +44,8 @@ class NexaBeepPortable < Formula
 
   def caveats
     <<~EOS
-      GUI 앱으로 쓰려면 창 모드로 실행하세요:
-        nexa-beep --window
+      GUI 앱으로 쓰려면 인자 없이 실행하세요(창 + 실물 발견):
+        nexa-beep
 
       macOS Dock 아이콘·앱 번들이 필요하면 설치본(Cask)을 쓰세요:
         brew install --cask kiros33/tap/nexa-beep
