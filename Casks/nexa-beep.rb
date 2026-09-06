@@ -15,9 +15,9 @@
 cask "nexa-beep" do
   arch arm: "arm64", intel: "x64"
 
-  version "0.2.14"
-  sha256 arm:   "88002b35325802f4643c4d3a27daa6efa1f936d124cc9b31dfba0fda30a4ba29",
-         intel: "23d460558a4fb60259f7c918d002b89f69ab6ae89663af42a31bc9998199e618"
+  version "0.2.15"
+  sha256 arm:   "ac248ec12dfae80fbfcbdd8c7e0c7b19e3557e7323cf53481f639261a9404532",
+         intel: "b79fb441f78529e1371efeff567734db3414199722dd1ef15c47f3175720c7c3"
 
   url "https://github.com/SosomLab/nexa-beep/releases/download/v#{version}/nexa-beep-#{version}-macos-#{arch}.dmg",
       verified: "github.com/SosomLab/nexa-beep/"
