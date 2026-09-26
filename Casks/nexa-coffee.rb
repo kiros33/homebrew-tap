@@ -4,8 +4,8 @@
 #   Homebrew Cask는 기본으로 quarantine을 붙이므로, 인증서를 갖추기 전까지는 여기서 떼는 것 외에 방법이 없다.
 #   무엇을 왜 하는지 caveats에 밝힌다.
 cask "nexa-coffee" do
-  version "0.1.1"
-  sha256 "278dd798a24ab39e0af5147cbccc8d30258ecef75209c824f693df57d4d4c84c"
+  version "0.1.2"
+  sha256 "81ce3f2a897077fb466b90606603ec187675eb564d9f94445d80655b8fe73228"
 
   url "https://github.com/SosomLab/nexa-coffee/releases/download/v#{version}/nexa-coffee-#{version}-macos-universal.zip"
   name "Nexa Coffee"

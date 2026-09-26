@@ -3,9 +3,9 @@
 class NexaCoffeePortable < Formula
   desc "Tiny tray timer that keeps the computer awake (Linux · static binary)"
   homepage "https://github.com/SosomLab/nexa-coffee"
-  url "https://github.com/SosomLab/nexa-coffee/releases/download/v0.1.1/nexa-coffee-0.1.1-linux-x64.tar.gz"
-  version "0.1.1"
-  sha256 "67de5e8d628d4e86ba829ceecc5cbcfc4e475963bd599ff6bdcb4dce56c5221a"
+  url "https://github.com/SosomLab/nexa-coffee/releases/download/v0.1.2/nexa-coffee-0.1.2-linux-x64.tar.gz"
+  version "0.1.2"
+  sha256 "7b82ac5dd5b7c8f19a2cf5acb051382ec1720052cd66ddf4645aefa6fb87eb14"
   license "MIT"
 
   depends_on :linux
