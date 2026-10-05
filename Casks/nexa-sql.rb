@@ -7,8 +7,8 @@
 #   Homebrew Cask는 기본으로 quarantine을 붙이므로 postflight에서 떼고, 무엇을 왜 했는지 caveats에 밝힌다.
 # ★ CLI `nsql`은 번들 안(`Contents/MacOS/nsql`) — `binary`가 brew의 bin에 링크한다(pkg 설치본의 /usr/local/bin 링크와 같은 역할).
 cask "nexa-sql" do
-  version "0.1.4"
-  sha256 "d738015777127953ac7eb0fb34008f71ae0a79de90d3766f9d2831c298abfaa8"
+  version "0.1.5"
+  sha256 "0571bc1b2834c460cc8cbe6d4339a062aa2914811c2643a6aa3edad0ef40ac1c"
 
   # `verified:`는 넣지 않는다(홈페이지와 같은 도메인 · 형제 저장소 brew style 경고 기록 — docs/33 §5).
   url "https://github.com/SosomLab/nexa-sql/releases/download/v#{version}/nexa-sql-#{version}-macos-universal.dmg"
