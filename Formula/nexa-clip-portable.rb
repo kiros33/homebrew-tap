@@ -8,25 +8,25 @@
 class NexaClipPortable < Formula
   desc "Cross-platform clipboard manager (portable binary)"
   homepage "https://github.com/SosomLab/nexa-clip"
-  version "0.1.8"
+  version "0.1.9"
   # PolyForm Noncommercial 1.0.0 — SPDX 식별자가 있다(오픈소스 라이선스는 아니다).
   license "PolyForm-Noncommercial-1.0.0"
 
   on_macos do
     on_arm do
-      url "https://github.com/SosomLab/nexa-clip/releases/download/v0.1.8/nexa-clip-0.1.8-macos-arm64-portable.tar.gz"
-      sha256 "4589cfbc1cc2487c7c179a21236dac838746cba8b35e1934a0d929983fa5e283"
+      url "https://github.com/SosomLab/nexa-clip/releases/download/v0.1.9/nexa-clip-0.1.9-macos-arm64-portable.tar.gz"
+      sha256 "11c803ec2e754036235810f759dec44cc195b6625b8f40415044a6d1ff606037"
     end
     on_intel do
-      url "https://github.com/SosomLab/nexa-clip/releases/download/v0.1.8/nexa-clip-0.1.8-macos-x64-portable.tar.gz"
-      sha256 "067597077fc364f67f26a51feefa7484b3efa5f506c899042fdb751cb0bbf22b"
+      url "https://github.com/SosomLab/nexa-clip/releases/download/v0.1.9/nexa-clip-0.1.9-macos-x64-portable.tar.gz"
+      sha256 "0ac38a7bd432c8970ea6471145b08fc3b305c777423c29c5d467f76518687720"
     end
   end
 
   on_linux do
     on_intel do
-      url "https://github.com/SosomLab/nexa-clip/releases/download/v0.1.8/nexa-clip-0.1.8-linux-x64-portable.tar.gz"
-      sha256 "2c0cf61f1ae6b8a622c86a91d38a81bfcce5a9386a51ce17d8dd95af262d275e"
+      url "https://github.com/SosomLab/nexa-clip/releases/download/v0.1.9/nexa-clip-0.1.9-linux-x64-portable.tar.gz"
+      sha256 "4292c5cdf55e48d7cdaa08cf68eb7f155888611f8fab9b0dd9701d619855bb43"
     end
   end
 
