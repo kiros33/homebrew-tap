@@ -2,10 +2,10 @@
 #
 # 버전 · 체크섬 자리는 릴리스 워크플로가 실제 산출물 해시로 채운다(packaging/render-manifests.sh) — 손으로 적은 해시는 언젠가 틀린다.
 # ★ 서명 · 공증이 없는 앱은 격리 표식(quarantine)이 붙어 있으면 실행 즉시 SIGKILL 된다(nexa-beep 08-11 실측) → postflight에서 뗀다
-#   (caveats에 그대로 밝힌다). 이 파일은 우리 탭(kiros33/homebrew-tap)에 들어가므로 영어 게이트 대상이 아니다.
+#   (caveats에 그대로 밝힌다). 게시물 문구(caveats 등)는 영어(docs/16 §5-6 · 사용자 10-10) — 주석만 한글.
 cask "nexa-dir" do
-  version "0.23.3"
-  sha256 "2235b809cf03ce05ed5f25d80522740f01399f121057bca486e608fdc8f13907"
+  version "0.24.0"
+  sha256 "a16248ae50e7954d1099c1b4c5dd135ccdac5e156d39e0bf7230034cf261a980"
 
   url "https://github.com/SosomLab/nexa-dir3/releases/download/v#{version}/nexa-dir-#{version}-macos-universal.pkg",
       verified: "github.com/SosomLab/nexa-dir3/"
@@ -46,7 +46,6 @@ cask "nexa-dir" do
     Verify your download against sha256sums.txt on the release page:
       https://github.com/SosomLab/nexa-dir3/releases
 
-    이 앱은 코드 서명·공증이 되어 있지 않습니다. 설치 과정에서 macOS 격리 표식을 제거해 바로 실행되도록 했습니다.
     License: PolyForm Noncommercial 1.0.0 - free for noncommercial use only.
   EOS
 end
