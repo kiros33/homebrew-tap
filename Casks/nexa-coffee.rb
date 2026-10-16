@@ -4,8 +4,8 @@
 #   Homebrew Cask는 기본으로 quarantine을 붙이므로, 인증서를 갖추기 전까지는 여기서 떼는 것 외에 방법이 없다.
 #   무엇을 왜 하는지 caveats에 밝힌다.
 cask "nexa-coffee" do
-  version "0.1.2"
-  sha256 "81ce3f2a897077fb466b90606603ec187675eb564d9f94445d80655b8fe73228"
+  version "0.1.3"
+  sha256 "bd76cf4dfeef0b948c586d3dc73b68b406332a7d6797b1e275006cd95f41849c"
 
   url "https://github.com/SosomLab/nexa-coffee/releases/download/v#{version}/nexa-coffee-#{version}-macos-universal.zip"
   name "Nexa Coffee"
@@ -27,7 +27,10 @@ cask "nexa-coffee" do
                    sudo: false
   end
 
-  zap trash: "~/Library/Application Support/nexa-coffee"
+  zap trash: [
+    "~/Library/Application Support/nexa-coffee",
+    "~/Library/LaunchAgents/com.sosomlab.nexa-coffee.plist", # 메뉴 "로그인 시 실행"이 만든 LaunchAgent(DR-15)
+  ]
 
   caveats <<~EOS
     This app is not code-signed or notarized (v1, no certificate).
@@ -36,6 +39,6 @@ cask "nexa-coffee" do
       https://github.com/SosomLab/nexa-coffee/releases
 
     Nexa Coffee lives in the menu bar (no Dock icon). To start it at login,
-    add "Nexa Coffee.app" to System Settings → General → Login Items.
+    tick "Start at login" in its menu (creates ~/Library/LaunchAgents/com.sosomlab.nexa-coffee.plist).
   EOS
 end
