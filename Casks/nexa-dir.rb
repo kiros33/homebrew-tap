@@ -4,8 +4,8 @@
 # ★ 서명 · 공증이 없는 앱은 격리 표식(quarantine)이 붙어 있으면 실행 즉시 SIGKILL 된다(nexa-beep 08-11 실측) → postflight에서 뗀다
 #   (caveats에 그대로 밝힌다). 게시물 문구(caveats 등)는 영어(docs/16 §5-6 · 사용자 10-10) — 주석만 한글.
 cask "nexa-dir" do
-  version "0.30.1"
-  sha256 "5013f8f963ab7d34d585523e029a2bdefaf62bc31c1fc4319b63407b50e198cb"
+  version "0.30.2"
+  sha256 "623afceb43928890c1c17e4ed00e382383e548fa2f0dd9618f32e8e36183f10c"
 
   url "https://github.com/SosomLab/nexa-dir3/releases/download/v#{version}/nexa-dir-#{version}-macos-universal.pkg",
       verified: "github.com/SosomLab/nexa-dir3/"
