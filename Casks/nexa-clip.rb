@@ -15,9 +15,9 @@
 cask "nexa-clip" do
   arch arm: "arm64", intel: "x64"
 
-  version "0.2.9"
-  sha256 arm:   "77f22e9c7d99e34426e3d8936f65ef20c8d9084390ed0d64c8fe8a5679d22080",
-         intel: "2e28f143fd85476a45eeb92d999a611c56c3258f2eec22a5a286ebc3fd5ba9c9"
+  version "0.2.10"
+  sha256 arm:   "7c35b2e86be6aed23a2c77f56cc93ca3eeba62e70dc5b642888fc1ba122db9db",
+         intel: "ea48347673c75de160e7951f1a47eeba0e3239333c14f46fcbe0b73a98b0824e"
 
   url "https://github.com/SosomLab/nexa-clip/releases/download/v#{version}/nexa-clip-#{version}-macos-#{arch}.dmg",
       verified: "github.com/SosomLab/nexa-clip/"
