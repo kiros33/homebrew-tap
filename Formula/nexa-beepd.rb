@@ -6,25 +6,25 @@
 class NexaBeepd < Formula
   desc "Blind relay server for Nexa Beep (rendezvous + hole punch + relay fallback)"
   homepage "https://github.com/SosomLab/nexa-beep"
-  version "1.0.0"
+  version "1.1.0"
   license "PolyForm-Noncommercial-1.0.0"
 
   on_macos do
     on_arm do
-      url "https://github.com/SosomLab/nexa-beep/releases/download/beepd-v1.0.0/nexa-beepd-1.0.0-macos-arm64.tar.gz"
-      sha256 "ec6d16a0f512c06240ca3e319765f1cbd755496feeba30ced1fcf03152ce3b28"
+      url "https://github.com/SosomLab/nexa-beep/releases/download/beepd-v1.1.0/nexa-beepd-1.1.0-macos-arm64.tar.gz"
+      sha256 "ba8df7ac17eeeb551a55ed9829ce22c524e3ab5431b172be88c8d511ca0bbd0a"
     end
     # ⚠️ Intel Mac 자산은 없다(docs/41 §1) — 필요하면 소스 빌드.
   end
 
   on_linux do
     on_intel do
-      url "https://github.com/SosomLab/nexa-beep/releases/download/beepd-v1.0.0/nexa-beepd-1.0.0-linux-x64.tar.gz"
-      sha256 "fd6b6a21c86c1299adf8c099ede578814a97365134f4408ec4088f2dc7e42bd2"
+      url "https://github.com/SosomLab/nexa-beep/releases/download/beepd-v1.1.0/nexa-beepd-1.1.0-linux-x64.tar.gz"
+      sha256 "22d386c28f65eca9904264317e9840fc9a2ba1a2854e20a81554497ec06d02e7"
     end
     on_arm do
-      url "https://github.com/SosomLab/nexa-beep/releases/download/beepd-v1.0.0/nexa-beepd-1.0.0-linux-arm64.tar.gz"
-      sha256 "78aaec6ea56c693eed49e7d3c8de6443b8d76e7fdeaf7004b4c2b04a822f68c7"
+      url "https://github.com/SosomLab/nexa-beep/releases/download/beepd-v1.1.0/nexa-beepd-1.1.0-linux-arm64.tar.gz"
+      sha256 "8072a33f5a55f950175933e791ec79497e974697f22acc207340ed0cf01b5f73"
     end
   end
 
