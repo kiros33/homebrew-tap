@@ -5,7 +5,7 @@
 # 손으로 갱신해야 한다"가 마찰점으로 남아 있었다 — 손으로 적는 해시는 언젠가 틀리고,
 # 틀린 해시는 사용자 기기에서 설치 실패로 나타난다. 그래서 여기서는 채우지 않는다.
 #
-# ★ **quarantine을 postflight에서 명시적으로 뗀다** — 그러지 않으면 앱이 실행되지 않는다.
+# ★ **quarantine을 postflight_steps에서 명시적으로 뗀다** — 그러지 않으면 앱이 실행되지 않는다.
 #   실측(08-11, macOS 15 · Intel): 서명 없는 앱 + quarantine → **SIGKILL(exit 137)**,
 #   그리고 macOS가 /Applications에서 앱을 치워 버린다. 애드혹 서명을 붙여도 결과는 같았다
 #   (quarantine 자체가 원인 · 공증(notarization) 없이는 우회 불가).
@@ -15,12 +15,11 @@
 cask "nexa-beep" do
   arch arm: "arm64", intel: "x64"
 
-  version "0.10.1"
-  sha256 arm:   "ff416c19d42a2107790b1bf564344f379fabb0dc56e50ca0f6669f27574f808f",
-         intel: "cee28fe36ece1f0034b50e5d42ce16809c0fa35cf8d3c06183c4e4843aa63f3f"
+  version "0.10.2"
+  sha256 arm:   "cb662902484a089e5ff16f345031c8eac6a4902494e50f55e81e86ceb786790c",
+         intel: "f7340a0dfd4ad349230e4b8cc0694e50f2b9394c817872b2ef9f36de81d99e40"
 
-  url "https://github.com/SosomLab/nexa-beep/releases/download/v#{version}/nexa-beep-#{version}-macos-#{arch}.dmg",
-      verified: "github.com/SosomLab/nexa-beep/"
+  url "https://github.com/SosomLab/nexa-beep/releases/download/v#{version}/nexa-beep-#{version}-macos-#{arch}.dmg"
   name "Nexa Beep"
   desc "Zero-config local network messenger"
   homepage "https://github.com/SosomLab/nexa-beep"
@@ -36,10 +35,10 @@ cask "nexa-beep" do
 
   # 서명·공증이 없어 macOS가 실행을 막는다 — 설치 시점에 격리 표식을 뗀다.
   # (이 저장소에서 받은 것이 맞는지는 릴리스의 SHA256SUMS.txt로 확인할 수 있다.)
-  postflight do
-    system_command "/usr/bin/xattr",
-                   args: ["-dr", "com.apple.quarantine", "#{appdir}/Nexa Beep.app"],
-                   sudo: false
+  # ※ 선언형 `postflight_steps`(Homebrew 7~) — 종전 `postflight do … end`(Ruby 블록)와 url의 `verified:`는
+  #   deprecated 경고를 냈다(11-21 · brew 7.0.15). 단계 블록 안은 Ruby 보간이 아니라 설치 시점 토큰 `{{appdir}}`.
+  postflight_steps do
+    run "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "{{appdir}}/Nexa Beep.app"]
   end
 
   caveats <<~EOS
